@@ -1,0 +1,1 @@
+import{j as e}from"./index-BIBAgXM4.js";const o="/bitmatics/assets/profile-Aiqygzp_.jpg";function n({src:r,...s}){return e.jsx("img",{...s,src:r==""?o:r,onError:t=>{t.target.onerror=null,t.target.src=o}})}export{n as default};
