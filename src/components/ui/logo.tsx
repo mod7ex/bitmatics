@@ -4,7 +4,7 @@ const Styles = {
     "fontWeight": "900",
     "letterSpacing": "-1.1px",
     "whiteSpace": "pre",
-    // "transformBox": "fill-box",
+    "transformBox": "fill-box" as const,
     "transformOrigin": "50% 50%",
 }
 

@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import SVGLogo from "./ui/logo";
-
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
-];
+import { NAV_LINKS } from '@/lib/utils'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -49,7 +43,7 @@ export default function Navbar() {
 
         {/* Desktop nav links */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
@@ -84,7 +78,7 @@ export default function Navbar() {
           }`}
       >
         <div className="bg-[#0E1350]/95 backdrop-blur-md px-6 pb-6 pt-2 flex flex-col gap-4 border-t border-white/10">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}

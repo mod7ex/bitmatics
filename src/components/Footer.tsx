@@ -1,19 +1,12 @@
-import { Twitter, Linkedin, Instagram, PhoneIcon } from "lucide-react";
+import { Twitter, Linkedin, Instagram, MessageCircle } from "lucide-react";
 import SVGLogo from "@/components/ui/logo";
-
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
-];
+import { NAV_LINKS } from '@/lib/utils'
 
 const socials = [
   { icon: Twitter, href: "", label: "Twitter" },
   { icon: Linkedin, href: "", label: "LinkedIn" },
   { icon: Instagram, href: "https://instagram.com/bitmatics", label: "Instagram" },
-  { icon: PhoneIcon, href: "https://wa.me/+212767875432", label: "Whatsapp" },
+  { icon: MessageCircle, href: "https://wa.me/+212767875432", label: "Whatsapp" },
 ];
 
 export default function Footer() {
@@ -62,7 +55,7 @@ export default function Footer() {
             >
               Navigation
             </span>
-            {navLinks.map((link) => (
+            {NAV_LINKS.map((link) => (
               <button
                 key={link.href}
                 onClick={() => handleClick(link.href)}
