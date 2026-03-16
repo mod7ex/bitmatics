@@ -96,6 +96,7 @@ export const Promise = {
       <Toaster />
       <Button
         onClick={() => {
+          // @ts-ignore
           const promise = new Promise((resolve) =>
             setTimeout(() => resolve({ name: "Sonner" }), 2000)
           );
